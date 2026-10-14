@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Security Seva — Citizen Cyber Fraud & Emergency SOS Portal</title>
+    <meta name="description" content="Citizen cyber fraud prevention, 24/7 emergency SOS reporting, scam database, post-fraud reassurance & action triage, and legal FIR complaint filing portal." />
+    <meta property="og:title" content="Cyber Security Seva — Citizen Cyber Fraud & Emergency SOS Portal" />
+    <meta property="og:description" content="Citizen cyber fraud prevention, 24/7 emergency SOS reporting, scam database, post-fraud reassurance & action triage, and legal FIR complaint filing portal." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CyberSeva" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      // Suppress Vite HMR WebSocket closing errors in AI Studio iframe container
+      (function() {
+        var origConsoleError = console.error;
+        console.error = function() {
+          var args = Array.prototype.slice.call(arguments);
+          var str = args.map(function(a) { return String(a && a.message ? a.message : (a && a.stack ? a.stack : a)); }).join(' ');
+          if (str.indexOf('WebSocket') !== -1 || (str.indexOf('[vite]') !== -1 && str.indexOf('WebSocket') !== -1)) {
+            return;
+          }
+          origConsoleError.apply(console, arguments);
+        };
+        window.addEventListener('error', function (event) {
+          var msg = event && (event.message || (event.error && event.error.message)) || '';
+          if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('closed without opened') !== -1 || msg.indexOf('[vite]') !== -1) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function (event) {
+          var reason = event && (event.reason && (event.reason.message || event.reason)) || '';
+          if (String(reason).indexOf('WebSocket') !== -1 || String(reason).indexOf('closed without opened') !== -1) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "Cyber Security Seva",
+  "description": "Citizen cyber fraud prevention, 24/7 emergency SOS reporting, scam database, post-fraud reassurance & action triage, and legal FIR complaint filing portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
